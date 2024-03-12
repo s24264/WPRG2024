@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Tabela HTML</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+
+        td.yellow-background {
+            background-color: yellow;
+        }
+
+        td.light-blue-background {
+            background-color: lightblue;
+        }
+
+        td.bold-font-1 {
+            font-weight: bold;
+            font-family: "Font1", sans-serif;
+        }
+
+        td.center-text {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p>Tabela przykładowa</p>
+<table>
+    <tr>
+        <td rowspan="2" class="yellow-background bold-font-1">Grupa A</td>
+        <td colspan="2" class="yellow-background bold-font-1">Mecz 1</td>
+        <td colspan="2" class="light-blue-background bold-font-1">Mecz 2</td>
+        <td colspan="1"></td>
+    </tr>
+    <tr>
+        <td class="yellow-background bold-font-1">Drużyna 1</td>
+        <td class="light-blue-background bold-font-1">Drużyna 2</td>
+        <td class="light-blue-background bold-font-1">Drużyna 1</td>
+        <td colspan="2" class="bold-font-1">Drużyna 2</td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="yellow-background">Rosja</td>
+        <td class="yellow-background">1</td>
+        <td class="light-blue-background">2</td>
+        <td class="light-blue-background">0</td>
+        <td colspan="2">0</td>
+    </tr>
+    <tr>
+        <td class="yellow-background">2</td>
+        <td class="light-blue-background">1</td>
+        <td class="light-blue-background">0</td>
+        <td colspan="2">0</td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="yellow-background">Polska</td>
+        <td class="yellow-background">0</td>
+        <td class="light-blue-background">2</td>
+        <td class="light-blue-background">1</td>
+        <td colspan="2">1</td>
+    </tr>
+    <tr>
+        <td class="yellow-background">1</td>
+        <td class="light-blue-background">0</td>
+        <td class="light-blue-background">1</td>
+        <td colspan="2">1</td>
+    </tr>
+    <tr>
+        <td colspan="2" class="yellow-background center-text">Przykładowa</td>
+        <td colspan="2" class="yellow-background center-text"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="yellow-background">zagnieżdżona tabela</td>
+        <td colspan="2" class="yellow-background"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="yellow-background bold-font-1">Imię Nazwisko Wiek</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="yellow-background">Jan Kowalski 25</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="yellow-background">Anna Nowak 30</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="yellow-background">Razem</td>
+        <td class="light-blue-background">4</td>
+        <td class="light-blue-background">4</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+</table>
+
+</body>
+</html>
