@@ -1,0 +1,9 @@
+div>p{
+    font-family: "Arial Black";
+}
+p+em{
+    color: red;
+}
+em+p{
+    color: red;
+}
