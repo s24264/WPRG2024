@@ -1,0 +1,37 @@
+.form {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input[type="text"],
+.form input[type="email"]
+.form input[type="tel"]{
+    display: block;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+.form button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
