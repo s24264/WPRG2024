@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+<h2>Kalkulator Prosty</h2>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="number" name="num1" required>
+    <select name="operator">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <input type="number" name="num2" required>
+    <input type="submit" value="Oblicz">
+</form>
+
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $num1 = $_POST["num1"];
+        $num2 = $_POST["num2"];
+        $operator = $_POST["operator"];
+
+        switch ($operator) {
+            case "add":
+                $result = $num1 + $num2;
+                break;
+            case "subtract":
+                $result = $num1 - $num2;
+                break;
+            case "multiply":
+                $result = $num1 * $num2;
+                break;
+            case "divide":
+                if ($num2 != 0) {
+                    $result = $num1 / $num2;
+                } else {
+                    $result = "Nie można dzielić przez zero";
+                }
+                break;
+            default:
+                $result = "Nieprawidłowy operator";
+                break;
+        }
+        echo "Wynik: $result";
+    }
+    ?>
+
+<h2>Kalkulator Zaawansowany</h2>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <input type="number" name="num" required>
+    <select name="advanced_operator">
+        <option value="cos">Cosinus</option>
+        <option value="sin">Sinus</option>
+        <option value="tan">Tangens</option>
+        <option value="dec_to_bin">Dziesiętne na binarne</option>
+        <option value="bin_to_dec">Binarne na dziesiętne</option>
+        <option value="dec_to_hex">Dziesiętne na szesnastkowe</option>
+        <option value="hex_to_dec">Szesnastkowe na dziesiętne</option>
+    </select>
+    <input type="submit" value="Oblicz">
+</form>
+
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $num = $_POST["num"];
+        $advanced_operator = $_POST["advanced_operator"];
+
+        switch ($advanced_operator) {
+            case "cos":
+                $result = cos($num);
+                break;
+            case "sin":
+                $result = sin($num);
+                break;
+            case "tan":
+                $result = tan($num);
+                break;
+            case "dec_to_bin":
+                $result = decbin($num);
+                break;
+            case "bin_to_dec":
+                $result = bindec($num);
+                break;
+            case "dec_to_hex":
+                $result = dechex($num);
+                break;
+            case "hex_to_dec":
+                $result = hexdec($num);
+                break;
+            default:
+                $result = "Nieprawidłowy operator";
+                break;
+        }
+        echo "Wynik: $result";
+    }
+    ?>
+</body>
+</html>
