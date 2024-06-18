@@ -1,0 +1,20 @@
+Definicja bazy danych:
+
+CREATE DATABASE defekty;
+USE defekty;
+CREATE TABLE zgloszenia
+(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(255),
+    nazwisko VARCHAR(255),
+    adres_email varchar(255),
+    defekt varchar(255)
+);
+
+Podpowiedź:
+Aby utworzyć bazę danych:
+otwórz Xampp Control Panel;
+uruchom usługi Apache i MySQL;
+otwórz Shell (po prawej stronie panelu);
+zaloguj się do bazy “mysql -u root”;
+przekopiuj i wklej definicję bazy.
